@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Coffee Shop</title>
+    
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- CART OVERLAY -->
+    <div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+
+    <!-- CART DRAWER -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" onclick="closeCart()">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong>₹<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/main-logo.png" alt="logo" class="logo-img"></a>
+
+        </div></a>
+        <nav class="nav-menu">
+            <a href="index.html" class="active">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="menu.html">MENU</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-cart-shopping" onclick="openCart()"></i>
+            <button class="login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fas fa-user"></i> Login
+            </button>
+
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+            <button class="nav-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </header>
+
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-modal">
+
+                <div class="modal-header border-0">
+                    <h4 class="modal-title">Welcome To COFFEE CONCEPT</h4>
+                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal"><i
+                            class="fas fa-times"></i></button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="login-subtext">
+                        Login to enjoy exclusive coffee deals and rewards
+                    </p>
+
+                    <form>
+                        <div class="form-group mb-3">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="you@example.com">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="••••••••">
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <input type="checkbox" id="remember">
+                                <label for="remember" class="small">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn login-submit w-100">
+                            Login
+                        </button>
+                    </form>
+
+                    <div class="login-divider">
+                        <span>OR</span>
+                    </div>
+
+                    <button class="btn social-login google">
+                        <i class="fab fa-google"></i> Continue with Google
+                    </button>
+
+                    <p class="signup-text">
+                        Don’t have an account?
+                        <a href="#">Sign up</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to our cozy coffee shop</h1>
+            <p>Discover our delicious coffee offerings!</p>
+            <div class="search-bar">
+                <input type="text" placeholder="What coffee are you craving?">
+                <button class="btn-find">Find</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-padding">
+        <h2 class="section-title">Our Menu</h2>
+
+        <div class="category-grid">
+            <div class="cat-card">
+                <p>Espresso</p><img src="images/cup.gif" alt="">
+            </div>
+            <div class="cat-card">
+                <p>Cappuccino</p><img src="images/Coffee break.gif" alt="">
+            </div>
+            <div class="cat-card">
+                <p>Latte</p><img src="images/Coffee shop (1).gif" alt="">
+            </div>
+            <div class="cat-card">
+                <p>Cold Brew</p><img src="images/Happy hour.gif" alt="">
+            </div>
+            <div class="cat-card">
+                <p>Pastries</p><img src="images/pastry chef.gif" alt="">
+            </div>
+            <div class="cat-card">
+                <p>Specialty</p><img src="images/eating.gif" alt="">
+
+            </div>
+        </div>
+
+
+
+        <!-- ===== DAILY SPECIALS & POPULAR ITEMS ===== -->
+        <div class="menu-showcase">
+
+            <!-- LEFT COLUMN -->
+            <div class="daily-special">
+                <h4><i class="fas fa-award"></i> Daily Specials</h4>
+
+                <div class="special-card">
+                    <span class="discount-badge">15% OFF</span>
+                    <img src="">
+                    <h5>Vanilla Latte</h5>
+                    <p class="brand">by Artisan</p>
+                    <button class="btn-order">Order Now</button>
+                </div>
+
+                <div class="new-flavor">
+                    <h5>New Flavor Alert</h5>
+                    <p>Caramel Macchiato</p>
+                    <span>20% OFF</span>
+                </div>
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="popular-items">
+
+                <!-- TITLE BAR -->
+                <div class="popular-header">
+                    <h4><i class="fas fa-fire"></i> Popular Items</h4>
+                    <a href="menu.html" class="view-all">View All</a>
+                </div>
+
+                <!-- PRODUCT GRID -->
+                <div class="popular-grid">
+                    <div class="item-card">
+                        <a href="./product.html">
+                            <img src="images/Coffee Beans.avif">
+                        </a>
+                        <div class="item-info">
+                            <p>Coffee Beans</p>
+                            <span>₹500</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <img src="images/latte-1.jpg">
+                        <div class="item-info">
+                            <p>Latte Art</p>
+                            <span>₹450</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <img src="images/Classic Espresso.avif">
+                        <div class="item-info">
+                            <p>Espresso Shot</p>
+                            <span>₹220</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <img src="images/cookies.jpg">
+                        <div class="item-info">
+                            <p>Coffee Cookies</p>
+                            <span>₹80</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <img src="images/Mocha.jpg">
+                        <div class="item-info">
+                            <p>Mocha</p>
+                            <span>₹300</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <img src="images/Iced Coffee.jpg">
+                        <div class="item-info">
+                            <p>Iced Coffee</p>
+                            <span>₹150</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <section class="favorites-section">
+            <div class="container">
+                <p class="section-tag">OUR FAVORITES</p>
+                <h2 class="section-title">Menu Highlights</h2>
+
+                <div class="favorites-grid">
+                    <div class="row">
+                        <div class="col-md-3 mt-3">
+                            <div class="favorite-card">
+                                <img src="images/latte.jpg" alt="Latte">
+                                <div class="favorite-info">
+                                    <h4>Signature Latte</h4>
+                                    <p>Rich espresso with silky steamed milk.</p>
+                                    <span>₹550</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-3">
+                            <div class="favorite-card">
+                                <img src="images/484d22882262b6e556620d5157f06cf0.webp" alt="Cold Brew">
+                                <div class="favorite-info">
+                                    <h4>Cold Brew Tonic</h4>
+                                    <p>Slow-steeped coffee with premium tonic.</p>
+                                    <span>₹300</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-3">
+
+                            <div class="favorite-card">
+                                <img src="images/Butter Croissant.jpg" alt="Croissant">
+                                <div class="favorite-info">
+                                    <h4>Butter Croissant</h4>
+                                    <p>Flaky, golden and baked fresh daily.</p>
+                                    <span>₹400</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-3">
+
+                            <div class="favorite-card">
+                                <img src="images/Classic Espresso.avif" alt="Espresso">
+                                <div class="favorite-info">
+                                    <h4>Classic Espresso</h4>
+                                    <p>Bold, smooth & perfectly extracted.</p>
+                                    <span>₹320</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <a href="menu.html" class="btn-view">
+                        <p>View Full Menu →</p>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===== BLOG SECTION ===== -->
+        <section class="blog-section mt-5">
+            <div class="container">
+                <p class="section-tag">OUR BLOG</p>
+                <h2 class="section-title">Coffee Stories & Brewing Tips</h2>
+
+                <div class="row mt-5">
+                    <!-- BLOG CARD -->
+                    <div class="col-md-6 mb-4" data-aos="fade-up">
+                        <div class="blog-card">
+                            <img src="images/female-coffee-drinking.jpg" alt="Coffee Beans">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="blog-content">
+                            <span class="blog-date">
+                                <i class="far fa-calendar"></i> Jan 12, 2026
+                            </span>
+
+                            <h4>How to Choose the Perfect Coffee Beans</h4>
+
+                            <p>
+                                Choosing the right coffee beans can transform your daily cup into a
+                                rich, flavorful experience. From aroma to taste, every detail matters
+                                when selecting beans that suit your brewing style.
+                            </p>
+
+                            <p>
+                                <strong>Roast Level:</strong> Light roasts preserve natural flavors
+                                and acidity, medium roasts provide balance, and dark roasts create
+                                bold, smoky richness. Choose based on your taste preference.
+                            </p>
+
+                            <p>
+                                <strong>Freshness:</strong> Always check the roast date. Freshly
+                                roasted beans (within 2–4 weeks) provide the best aroma and flavor.
+                                Store them in an airtight container away from heat and light.
+                            </p>
+
+                            <a href="#" class="blog-link">
+                                Read Full Article <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End -->
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>Coffee Concept</h2>
+                <p>
+                    Brewing happiness one cup at a time.<br>
+                    Fresh coffee, cozy vibes, unforgettable moments.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-hours">
+                <h3>Opening Hours</h3>
+                <p>Mon – Fri: 8:00 AM – 9:00 PM</p>
+                <p>Saturday: 9:00 AM – 10:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+            <div class="footer-social text-center">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Coffee Concept. All rights reserved.</span>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const closeBtn = document.querySelector('.nav-close-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        const navIcons = document.querySelector('.nav-icons');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.add('active');
+            navIcons.classList.add('menu-open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navIcons.classList.remove('menu-open');
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function openCart() {
+            document.getElementById("cartDrawer").classList.add("active");
+            document.getElementById("cartOverlay").classList.add("active");
+            renderCart();
+        }
+
+        function closeCart() {
+            document.getElementById("cartDrawer").classList.remove("active");
+            document.getElementById("cartOverlay").classList.remove("active");
+        }
+
+        function addToCart(name, price, image) {
+            let item = cart.find(i => i.name === name);
+            if (item) {
+                item.qty += 1;
+            } else {
+                cart.push({ name, price, image, qty: 1 });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        function renderCart() {
+            const container = document.getElementById("cartItems");
+            let total = 0;
+            container.innerHTML = "";
+
+            cart.forEach((item, index) => {
+                total += item.price * item.qty;
+
+                container.innerHTML += `
+    <div class="cart-item">
+        <img src="${item.image}">
+        <div class="cart-item-info">
+            <h5>${item.name}</h5>
+            <span>₹${item.price}</span>
+            <div class="cart-qty">
+                <button onclick="changeQty(${index}, -1)">−</button>
+                <span>${item.qty}</span>
+                <button onclick="changeQty(${index}, 1)">+</button>
+            </div>
+        </div>
+    </div>
+`;
+
+            });
+
+            document.getElementById("cartTotal").innerText = total.toFixed(2);
+        }
+
+        function changeQty(index, change) {
+            cart[index].qty += change;
+            if (cart[index].qty <= 0) cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+    </script>
+
+</body>
+
+</html>

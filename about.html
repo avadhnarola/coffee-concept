@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | Coffee Concept</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.jpg">
+
+
+</head>
+
+<body>
+
+
+    <!-- CART OVERLAY -->
+    <div id="cartOverlay" class="cart-overlay" onclick="closeCart()"></div>
+
+    <!-- CART DRAWER -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" onclick="closeCart()">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong>₹<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/main-logo.png" alt="logo" class="logo-img"></a>
+
+        </div></a>
+        <nav class="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="about.html"  class="active">ABOUT</a>
+            <a href="menu.html">MENU</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-cart-shopping" onclick="openCart()"></i>
+            <button class="login-btn"><i class="fas fa-user"></i> Login</button>
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+            <button class="nav-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </header>
+
+    <!-- ===== ABOUT HERO ===== -->
+    <section class="about-hero">
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-content" data-aos="fade-up">
+            <h1>More Than Just Coffee</h1>
+            <p>Crafting moments, one cup at a time ☕</p>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT STORY ===== -->
+    <section class="about-section mt-3">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+
+                <div class="col-md-6" data-aos="fade-right">
+                    <h2>Our Story</h2>
+                    <p>
+                        Coffee Concept began with a simple idea: coffee should be
+                        an experience, not just a habit.
+                    </p>
+                    <p>
+                        From ethically sourced beans to expert roasting and
+                        handcrafted brewing — every detail matters.
+                    </p>
+                </div>
+
+                <div class="col-md-6 about-image" data-aos="zoom-in">
+                    <img src="images/Coffee shop.gif" class="img-fluid rounded-4">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-md-4" data-aos="flip-left">
+                    <div class="why-card">
+                        <i class="fas fa-seedling"></i>
+                        <h4>Ethically Sourced</h4>
+                        <p>Direct trade beans from trusted farms.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="flip-up">
+                    <div class="why-card">
+                        <i class="fas fa-mug-hot"></i>
+                        <h4>Expert Baristas</h4>
+                        <p>Perfectly brewed by trained professionals.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="flip-right">
+                    <div class="why-card">
+                        <i class="fas fa-couch"></i>
+                        <h4>Cozy Atmosphere</h4>
+                        <p>A space to relax, work, and connect.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4" data-aos="fade-up">
+                    <h3>50+</h3>
+                    <p>Bean Varieties</p>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <h3>240+</h3>
+                    <p>Happy Customers Daily</p>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <h3>12</h3>
+                    <p>Awards Won</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEAM ===== -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Meet Our Baristas</h2>
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="team-card">
+                        <img src="images/chef-1.webp">
+                        <h4>Emma Stone</h4>
+                        <p>Head Barista</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="team-card">
+                        <img src="images/chef-2.png">
+                        <h4>Liam Brown</h4>
+                        <p>Coffee Specialist</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-card">
+                        <img src="images/chef-3.jpg">
+                        <h4>Sophia Lee</h4>
+                        <p>Latte Artist</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="about-cta" data-aos="fade-up">
+        <h2>Come for the Coffee, Stay for the Concept</h2>
+        <a href="menu.html" class="btn-find">Explore Our Menu</a>
+    </section>
+
+     <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>Coffee Concept</h2>
+                <p>
+                    Brewing happiness one cup at a time.<br>
+                    Fresh coffee, cozy vibes, unforgettable moments.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-hours">
+                <h3>Opening Hours</h3>
+                <p>Mon – Fri: 8:00 AM – 9:00 PM</p>
+                <p>Saturday: 9:00 AM – 10:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+            <div class="footer-social text-center">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Coffee Concept. All rights reserved.</span>
+        </div>
+    </footer>
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const closeBtn = document.querySelector('.nav-close-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        const navIcons = document.querySelector('.nav-icons');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.add('active');
+            navIcons.classList.add('menu-open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navIcons.classList.remove('menu-open');
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function openCart() {
+            document.getElementById("cartDrawer").classList.add("active");
+            document.getElementById("cartOverlay").classList.add("active");
+            renderCart();
+        }
+
+        function closeCart() {
+            document.getElementById("cartDrawer").classList.remove("active");
+            document.getElementById("cartOverlay").classList.remove("active");
+        }
+
+        function addToCart(name, price, image) {
+            let item = cart.find(i => i.name === name);
+            if (item) {
+                item.qty += 1;
+            } else {
+                cart.push({ name, price, image, qty: 1 });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        function renderCart() {
+            const container = document.getElementById("cartItems");
+            let total = 0;
+            container.innerHTML = "";
+
+            cart.forEach((item, index) => {
+                total += item.price * item.qty;
+
+             container.innerHTML += `
+    <div class="cart-item">
+        <img src="${item.image}">
+        <div class="cart-item-info">
+            <h5>${item.name}</h5>
+            <span>₹${item.price}</span>
+            <div class="cart-qty">
+                <button onclick="changeQty(${index}, -1)">−</button>
+                <span>${item.qty}</span>
+                <button onclick="changeQty(${index}, 1)">+</button>
+            </div>
+        </div>
+    </div>
+`;
+
+            });
+
+            document.getElementById("cartTotal").innerText = total.toFixed(2);
+        }
+
+        function changeQty(index, change) {
+            cart[index].qty += change;
+            if (cart[index].qty <= 0) cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+    </script>
+
+</body>
+
+</html>
