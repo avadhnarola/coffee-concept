@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffee Admin Dashboard</title>
+    <link rel="icon" type="image/jpg" href="../images/logo.jpg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap&_cacheOverride=1767938688319"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar p-4" id="sidebar">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="logo-admin">
+                <a href="index.html"><img src="../images/logo-admin-1.png" alt="Admin Logo"></a>
+                <button class="btn d-md-none text-white" id="closeBtn">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <ul class="nav flex-column gap-2">
+            <li><a class="nav-link active" href="index.html"><i class="bi bi-speedometer2"></i>Dashboard</a></li>
+            <li><a class="nav-link" href="menu.html"><i class="bi bi-cup-hot"></i>Menu</a></li>
+            <li><a class="nav-link" href="#"><i class="bi bi-cart"></i>Orders</a></li>
+            <li><a class="nav-link" href="#"><i class="bi bi-gear"></i>Settings</a></li>
+            <li class="mt-4"><a class="nav-link" href="#"><i class="bi bi-box-arrow-left"></i>Logout</a></li>
+        </ul>
+    </aside>
+
+
+    <div class="content">
+        <div class="top-header rounded-4 mb-4">
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn text-black mx-2" id="toggleBtn">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="search-box position-relative d-none d-md-block">
+                    <i class="bi bi-search"></i>
+                    <input type="text" class="form-control" placeholder="Search or type command...">
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-light mx-2" id="darkToggle">
+                    <i class="bi bi-moon"></i>
+                </button>
+
+                <button class="btn btn-light position-relative">
+                    <i class="bi bi-bell"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <div class="dropdown">
+                    <button class="btn d-flex align-items-center gap-2 dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="https://i.pravatar.cc/40" class="rounded-circle" width="32" height="32">
+                        <span class="d-md-inline">Musharof</span>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end p-3" style="width: 230px;">
+                        <li class="mb-2">
+                            <strong>Musharof Chowdhury</strong><br>
+                            <small class="text-muted">randomuser@pimjo.com</small>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                <i class="bi bi-person"></i> Edit profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                <i class="bi bi-gear"></i> Account settings
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                <i class="bi bi-life-preserver"></i> Support
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#">
+                                <i class="bi bi-box-arrow-right"></i> Sign out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main class="content">
+
+        <h3 class="mb-1">Dashboard</h3>
+        <p class=" mb-4">Welcome back! Here's what's happening today.</p> <!-- Stats -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-3 col-6">
+                <div class="stat-card d-flex justify-content-between align-items-center">
+                    <div> <small class="">Today's Sales</small>
+                        <h4>₹3790</h4>
+                    </div>
+                    <div class="stat-icon icon-green"><i class="bi bi-currency-rupee"></i></div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card d-flex justify-content-between align-items-center">
+                    <div> <small class="">Today's Orders</small>
+                        <h4>7</h4>
+                    </div>
+                    <div class="stat-icon icon-brown"><i class="bi bi-cup"></i></div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card d-flex justify-content-between align-items-center">
+                    <div> <small class="">New Orders</small>
+                        <h4>1</h4>
+                    </div>
+                    <div class="stat-icon icon-orange"><i class="bi bi-graph-up"></i></div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card d-flex justify-content-between align-items-center">
+                    <div> <small class="">Pending Bookings</small>
+                        <h4>1</h4>
+                    </div>
+                    <div class="stat-icon icon-yellow"><i class="bi bi-clock"></i></div>
+                </div>
+            </div>
+        </div> <!-- Analytics -->
+        <div class="row g-4">
+            <div class="col-md-7">
+                <div class="panel">
+                    <h6>Sales Analytics</h6>
+                    <div class="bg-light rounded-4 p-4 text-center"> <small class="">Today's Sales</small>
+                        <h2>₹3790</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="panel">
+                    <h6>Best Sellers (Today)</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between"><span>Espresso</span><small>5
+                                sold</small></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>Latte</span><small>4
+                                sold</small></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>Cappuccino</span><small>3
+                                sold</small></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>Cold Brew</span><small>2
+                                sold</small></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>Belgian
+                                Waffle</span><small>1 sold</small></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggleBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const darkToggle = document.getElementById('darkToggle');
+        const content = document.querySelector('.content');
+
+        toggleBtn.onclick = () => {
+            if (window.innerWidth >= 768) {
+                sidebar.classList.toggle('collapsed');
+                content.classList.toggle('expanded');
+            } else {
+                sidebar.classList.toggle('show');
+            }
+        };
+
+        closeBtn.onclick = () => {
+            sidebar.classList.remove('show');
+        };
+
+        darkToggle.onclick = () => {
+            document.body.classList.toggle('dark');
+        };
+    </script>
+
+
+</body>
+
+</html>

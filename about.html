@@ -46,7 +46,7 @@
         </div></a>
         <nav class="nav-menu">
             <a href="index.html">HOME</a>
-            <a href="about.html"  class="active">ABOUT</a>
+            <a href="about.html" class="active">ABOUT</a>
             <a href="menu.html">MENU</a>
             <a href="contact.html">CONTACT</a>
         </nav>
@@ -66,7 +66,7 @@
         <div class="about-hero-overlay"></div>
         <div class="about-hero-content" data-aos="fade-up">
             <h1>More Than Just Coffee</h1>
-            <p>Crafting moments, one cup at a time ☕</p>
+            <p>Crafting moments, one cup at a time <i class="fas fa-coffee"></i></p>
         </div>
     </section>
 
@@ -98,7 +98,7 @@
     <!-- ===== WHY CHOOSE US ===== -->
     <section class="why-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Why Choose Us</h2>
+            <h2 class="section-title text-center" data-aos="fade-up">Why Choose Us</h2>
 
             <div class="row g-4 mt-4">
 
@@ -156,7 +156,7 @@
     <!-- ===== TEAM ===== -->
     <section class="team-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Meet Our Baristas</h2>
+            <h2 class="section-title text-center" data-aos="fade-up">Meet Our Baristas</h2>
 
             <div class="row g-4 mt-4">
 
@@ -191,10 +191,14 @@
     <!-- ===== CTA ===== -->
     <section class="about-cta" data-aos="fade-up">
         <h2>Come for the Coffee, Stay for the Concept</h2>
-        <a href="menu.html" class="btn-find">Explore Our Menu</a>
+        <div class="d-flex justify-content-center">
+            <a href="menu.html" class="btn-view" style="background-color: #d97706;">
+                <p class="text-white">View Full Menu <i class="fa-solid fa-arrow-right"></i></p>
+            </a>
+        </div>
     </section>
 
-     <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
 
             <div class="footer-brand">
@@ -292,7 +296,7 @@
             cart.forEach((item, index) => {
                 total += item.price * item.qty;
 
-             container.innerHTML += `
+                container.innerHTML += `
     <div class="cart-item">
         <img src="${item.image}">
         <div class="cart-item-info">

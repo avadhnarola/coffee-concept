@@ -6,13 +6,11 @@
     --coffee-brown: #6F4E37;
     --transition-speed: 0.3s;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 a {
     text-decoration: none;
 }
@@ -284,7 +282,6 @@ nav a.active::after {
     border-radius: 15px;
     overflow: hidden;
     font-size: 13px;
-    margin-top: 8px;
 }
 
 .item-card img {
@@ -679,16 +676,19 @@ nav a.active::after {
     font-weight: 600;
     color: black;
 }
-.btn-view:hover{
+
+.btn-view:hover {
     text-decoration: none;
     color: black;
 }
-.btn-view p{
+
+.btn-view p {
     padding: 0;
     margin: 0;
     transition: all ease 0.5s;
 }
-.btn-view p:hover{
+
+.btn-view p:hover {
     transform: translateX(5px);
 }
 
@@ -1303,7 +1303,7 @@ nav a.active::after {
     background: var(--primary-orange);
     color: #fff;
     border: none;
-    padding: 4px 18px;
+    padding: 5px 18px;
     border-radius: 30px;
     font-size: 13px;
     opacity: 1;
